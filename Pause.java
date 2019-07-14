@@ -14,10 +14,13 @@ public class Pause extends MusicSymbol {
 
 	@Override
 	public void startPlaying() {}
+
 	@Override
 	public void stopPlaying() {}
+	
 	@Override
 	public void pressOnPiano(Piano piano) {}
+	
 	@Override
 	public void releaseOnPiano(Piano piano) {}
 }

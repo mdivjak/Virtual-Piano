@@ -46,7 +46,6 @@ public class MidiFormatter implements Formatter {
 			track.add(midiEvent);
 			actionTime = 1;
 			
-//			Ovaj deo do for petlje je uvek isti tu se postavljaju neka zaglavlja
 			for(int i = 0; i < composition.size(); i++) {
 				MusicSymbol symbol = null;
 				try { symbol = composition.get(i); } catch(NoSymbolFound e) { continue; }
@@ -59,12 +58,10 @@ public class MidiFormatter implements Formatter {
 					int midiCode = NoteMaps.StringToInteger.get(note.toString());
 					
 					shortMessage = new ShortMessage();
-//					0x90 je kod za pustanje tona
 					shortMessage.setMessage(0x90, midiCode, 100);
 					midiEvent = new MidiEvent(shortMessage, actionTime);
 					track.add(midiEvent);
 					shortMessage = new ShortMessage();
-//					0x80 je kod za zaustavljanje tona
 					shortMessage.setMessage(0x80, midiCode, 100);
 					midiEvent = new MidiEvent(shortMessage, actionTime + tpq * rhythm);
 					track.add(midiEvent);

@@ -135,18 +135,6 @@ public class Main extends Frame {
 	}
 	
 	private void addComponents() {
-//		Program se sastoji od panela fullWindow koji ima 3 reda
-//			U prvom redu je kontrolna tabla koja ima dve kolone tj Grid 1x2
-//				U levom polju se nalazi panel od tri reda
-//					Prvi red ima labelu, textfield za unos putanje do fajla za citanje i dugme za ucitavanje
-//					Drugi red ima checkboxove kojima se bira kako se ispisuju note kompozicije
-//					Treci red ima 3 dugmeta za pustanje kompozicije
-//				Desni deo kontrolne table ima isto tri reda
-//					Prvi red ima labelu, textfield za putanje do fajla u koji se eksportuje
-//					Drugi red ima checkboxove kojima se bira u kom formatu se eksportuje
-//					Treci red ima 2 dugmeta za snimanje kompozicije
-//			Drugi red sadrzi vizuelni prikaz kompozicije
-//			Treci red sadrzi klavir
 		Panel fullWindow = new Panel(new GridLayout(3, 1));
 		
 		Panel controlPanel = new Panel(new GridLayout(1, 2));
